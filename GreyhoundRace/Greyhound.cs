@@ -15,13 +15,16 @@ namespace GreyhoundRace
         public int Location = 0;
         public Random MyRandom;
 
+        
+
         public bool Run()
         {
             MyPictureBox.Left += MyRandom.Next(1, 5);
             if(MyPictureBox.Left >= RacetrackLenght - MyPictureBox.Width)
             {
                 return true;
-            } else
+            }
+            else
             {
                 return false;
             }
