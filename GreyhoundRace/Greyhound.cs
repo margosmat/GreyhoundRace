@@ -14,9 +14,7 @@ namespace GreyhoundRace
         public PictureBox MyPictureBox = null;
         public int Location = 0;
         public Random MyRandom;
-
         
-
         public bool Run()
         {
             MyPictureBox.Left += MyRandom.Next(1, 5);
@@ -32,7 +30,7 @@ namespace GreyhoundRace
 
         public void TakeStartingPosition()
         {
-
+            MyPictureBox.Left = 0;
         }
     }
 }

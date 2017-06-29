@@ -17,6 +17,7 @@ namespace GreyhoundRace
         public Form1()
         {
             InitializeComponent();
+
             GreyhoundArray[0] = new Greyhound()
             {
                 MyPictureBox = pictureBox1,
