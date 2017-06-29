@@ -13,6 +13,7 @@ namespace GreyhoundRace
     public partial class Form1 : Form
     {
         Greyhound[] GreyhoundArray = new Greyhound[3];
+        Guy[] GuyArray = new Guy[2];
 
         public Form1()
         {
@@ -41,6 +42,31 @@ namespace GreyhoundRace
                 MyPictureBox = pictureBox4,
                 StartingPosition = pictureBox4.Left,
                 RacetrackLenght = raceTrack.Width - pictureBox4.Width,
+            };
+
+            GuyArray[0] = new Guy()
+            {
+                Name = "Janek",
+                Cash = 50,
+                MyRadioButton = janekRadioButton,
+                MyLabel = janekBetLabel,
+                MyBet = null
+            };
+            GuyArray[1] = new Guy()
+            {
+                Name = "Bartek",
+                Cash = 75,
+                MyRadioButton = bartekRadioButton,
+                MyLabel = bartekBetLabel,
+                MyBet = null
+            };
+            GuyArray[2] = new Guy()
+            {
+                Name = "Arek",
+                Cash = 45,
+                MyRadioButton = arekRadioButton,
+                MyLabel = arekBetLabel,
+                MyBet = null
             };
         }
 
