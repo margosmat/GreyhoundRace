@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GreyhoundRace
 {
@@ -12,6 +13,14 @@ namespace GreyhoundRace
         public int Dog;
         public Guy Bettor;
 
+        /*public string GetDescription()
+        {
 
+        }
+
+        public int PayOut()
+        {
+
+        }*/
     }
 }
