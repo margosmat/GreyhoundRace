@@ -18,10 +18,11 @@ namespace GreyhoundRace
 
         public void UpdateLabels()
         {
-            /*MyRadioButton.Text = Name + " ma " + Cash + " zł";
-             if (Guy.PlaceBet() == true)
+            MyRadioButton.Text = Name + " ma " + Cash + " zł";
+            MyLabel.Text = Name + " nie zawarł zakładu";
+            /*if (Guy.PlaceBet() == true)
             {
-                MyLabel.Text = Name + " stawia " + Amount + " zł na charta nr " DogToWin;
+                MyLabel.Text = Name + " stawia " + Amount + " zł na charta nr " + DogToWin;
             }
             else
             {
@@ -41,6 +42,7 @@ namespace GreyhoundRace
             if (BetAmount <= Cash)
             {
                 return true;
+                MyLabel.Text = Name + " stawia " + BetAmount + " zł na charta nr " + DogToWin;
             }
             else
             {

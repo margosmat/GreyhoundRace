@@ -73,6 +73,12 @@ namespace GreyhoundRace
                 MyLabel = arekBetLabel,
                 MyBet = null
             };
+
+            for (int i = 0; i <= 2; i++)
+            {
+                GuyArray[i].UpdateLabels();
+            }
+
         }
 
         private void startButton_Click(object sender, EventArgs e)
@@ -91,6 +97,17 @@ namespace GreyhoundRace
                 } else
                 {
                     GreyhoundArray[i].Run();
+                }
+            }
+        }
+
+        private void betButton_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i <= 2; i++)
+            {
+                if (GuyArray[i].MyRadioButton.Checked == true)
+                {
+                    GuyArray[i].PlaceBet((int)betAmount.Value, (int)houndNumeric.Value - 1);
                 }
             }
         }

@@ -168,6 +168,7 @@
             this.betButton.TabIndex = 9;
             this.betButton.Text = "stawia";
             this.betButton.UseVisualStyleBackColor = true;
+            this.betButton.Click += new System.EventHandler(this.betButton_Click);
             // 
             // nameLabel
             // 
