@@ -82,9 +82,16 @@ namespace GreyhoundRace
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            while (true)
+            for (int i = 0; i <= 3; i++)
             {
-                GreyhoundArray[0].Run();
+                if (GreyhoundArray[i].Run() == true)
+                {
+                    timer1.Stop();
+                    //GreyhoundArray[i].TakeStartingPosition();
+                } else
+                {
+                    GreyhoundArray[i].Run();
+                }
             }
         }
     }

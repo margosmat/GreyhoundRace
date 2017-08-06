@@ -17,9 +17,11 @@ namespace GreyhoundRace
         
         public bool Run()
         {
-            StartingPosition += MyRandom.Next(1, 5);
-            //StartingPosition = Location;
-            if(StartingPosition >= RacetrackLenght - MyPictureBox.Width)
+            MyPictureBox.Left += MyRandom.Next(1, 5);
+            //Location += MyRandom.Next(1, 5);
+            //StartingPosition += Location;
+            //MyPictureBox.Left += Location;
+            if (MyPictureBox.Left >= RacetrackLenght - 45)
             {
                 return true;
             }
@@ -31,7 +33,7 @@ namespace GreyhoundRace
 
         public void TakeStartingPosition()
         {
-            Location = 0;
+            MyPictureBox.Left = StartingPosition;
         }
     }
 }
