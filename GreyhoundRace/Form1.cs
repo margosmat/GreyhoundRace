@@ -84,6 +84,7 @@ namespace GreyhoundRace
         private void startButton_Click(object sender, EventArgs e)
         {
             timer1.Start();
+            groupBox1.Enabled = false;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -93,7 +94,15 @@ namespace GreyhoundRace
                 if (GreyhoundArray[i].Run() == true)
                 {
                     timer1.Stop();
-                    //GreyhoundArray[i].TakeStartingPosition();
+                    for (int j = 0; j <=3 ; j++)
+                    {
+                        GreyhoundArray[j].TakeStartingPosition();
+                    }
+                    for (int k = 0; k <=2 ; k++)
+                    {
+                        GuyArray[k].UpdateLabels();
+                    }
+                    groupBox1.Enabled = true;
                 } else
                 {
                     GreyhoundArray[i].Run();
@@ -111,6 +120,30 @@ namespace GreyhoundRace
                     GuyArray[i].MyBet.GetDescription();
                 }
 
+            }
+        }
+
+        private void janekRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (janekRadioButton.Checked == true)
+            {
+                nameLabel.Text = "Janek";
+            }
+        }
+
+        private void bartekRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (bartekRadioButton.Checked == true)
+            {
+                nameLabel.Text = "Bartek";
+            }
+        }
+
+        private void arekRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (arekRadioButton.Checked == true)
+            {
+                nameLabel.Text = "Arek";
             }
         }
     }

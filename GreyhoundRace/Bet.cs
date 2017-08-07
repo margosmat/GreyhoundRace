@@ -18,7 +18,7 @@ namespace GreyhoundRace
             string description;
             if (Amount != 0)
             {
-                description = Bettor.Name + " stawia " + Amount + " zł na charta nr " + Dog;
+                description = Bettor.Name + " stawia " + Amount + " zł na charta nr " + (Dog + 1);
             }
             else
             {
