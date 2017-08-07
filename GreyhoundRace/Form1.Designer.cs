@@ -253,6 +253,7 @@
             // janekRadioButton
             // 
             this.janekRadioButton.AutoSize = true;
+            this.janekRadioButton.Checked = true;
             this.janekRadioButton.Location = new System.Drawing.Point(11, 59);
             this.janekRadioButton.Name = "janekRadioButton";
             this.janekRadioButton.Size = new System.Drawing.Size(110, 17);
@@ -313,6 +314,9 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.raceTrack);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Dzień na wyścigach";
             ((System.ComponentModel.ISupportInitialize)(this.raceTrack)).EndInit();

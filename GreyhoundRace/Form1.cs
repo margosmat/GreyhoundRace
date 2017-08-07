@@ -52,7 +52,7 @@ namespace GreyhoundRace
             GuyArray[0] = new Guy()
             {
                 Name = "Janek",
-                Cash = 50,
+                Cash = 10,
                 MyRadioButton = janekRadioButton,
                 MyLabel = janekBetLabel,
                 MyBet = null
@@ -116,7 +116,7 @@ namespace GreyhoundRace
             {
                 if (GuyArray[i].MyRadioButton.Checked == true)
                 {
-                    GuyArray[i].PlaceBet((int)betAmount.Value, (int)houndNumeric.Value - 1);
+                    GuyArray[i].PlaceBet((int)betAmount.Value, ((int)houndNumeric.Value - 1));
                     GuyArray[i].MyBet.GetDescription();
                 }
 

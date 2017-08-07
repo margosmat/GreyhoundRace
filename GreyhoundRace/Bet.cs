@@ -16,13 +16,14 @@ namespace GreyhoundRace
         public string GetDescription()
         {
             string description;
-            if (Amount != 0)
+            if (Bettor.PlaceBet(Bettor.MyBet.Amount, Bettor.MyBet.Dog) == true)
             {
                 description = Bettor.Name + " stawia " + Amount + " zł na charta nr " + (Dog + 1);
             }
             else
             {
                 description = Bettor.Name + " nie zawarł zakładu";
+                Bettor.MyBet.Amount = 0;
             }
             Bettor.MyLabel.Text = description;
             return description;
