@@ -100,9 +100,12 @@ namespace GreyhoundRace
                     }
                     for (int k = 0; k <=2 ; k++)
                     {
-                        GuyArray[k].UpdateLabels();
+                        GuyArray[k].UpdateLabels();                        
                     }
                     groupBox1.Enabled = true;
+
+
+
                 } else
                 {
                     GreyhoundArray[i].Run();

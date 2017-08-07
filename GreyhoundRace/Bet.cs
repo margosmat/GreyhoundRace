@@ -23,15 +23,22 @@ namespace GreyhoundRace
             else
             {
                 description = Bettor.Name + " nie zawarł zakładu";
-                Bettor.MyBet.Amount = 0;
+                Bettor.ClearBet();
             }
             Bettor.MyLabel.Text = description;
             return description;
         }
-        /*
-        public int PayOut()
+        
+        public int PayOut(int Winner)
         {
-
-        }*/
+            if(Bettor.MyBet.Dog == Winner)
+            {
+                return Amount;
+            }
+            else
+            {
+                return -Amount
+            }
+        }
     }
 }
