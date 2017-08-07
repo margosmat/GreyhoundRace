@@ -42,7 +42,7 @@ namespace GreyhoundRace
             if (BetAmount <= Cash)
             {
                 return true;
-                MyLabel.Text = Name + " stawia " + BetAmount + " zł na charta nr " + DogToWin;
+                //MyLabel.Text = Name + " stawia " + BetAmount + " zł na charta nr " + DogToWin;
             }
             else
             {

@@ -108,7 +108,9 @@ namespace GreyhoundRace
                 if (GuyArray[i].MyRadioButton.Checked == true)
                 {
                     GuyArray[i].PlaceBet((int)betAmount.Value, (int)houndNumeric.Value - 1);
+                    GuyArray[i].MyBet.GetDescription();
                 }
+
             }
         }
     }
