@@ -24,7 +24,10 @@ namespace GreyhoundRace
 
         public void ClearBet()
         {
-            MyBet.Amount = 0;
+            if (MyBet != null)
+            {
+                MyBet.Amount = 0;
+            }
         }
 
         public bool PlaceBet(int BetAmount, int DogToWin)
@@ -38,13 +41,15 @@ namespace GreyhoundRace
             else
             {
                 return false;
-                //MyBet.Amount = 0;
             }
         }
 
         public void Collect(int Winner)
         {
-            MyBet.
+            if (MyBet != null)
+            {
+                Cash += MyBet.PayOut(Winner);
+            }
         }
     }
 }

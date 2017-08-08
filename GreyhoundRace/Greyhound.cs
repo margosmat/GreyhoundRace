@@ -12,15 +12,11 @@ namespace GreyhoundRace
         public int StartingPosition;
         public int RacetrackLenght;
         public PictureBox MyPictureBox = null;
-        public int Location = 0;
         public Random MyRandom;
         
         public bool Run()
         {
             MyPictureBox.Left += MyRandom.Next(1, 5);
-            //Location += MyRandom.Next(1, 5);
-            //StartingPosition += Location;
-            //MyPictureBox.Left += Location;
             if (MyPictureBox.Left >= RacetrackLenght - 45)  //45, bo przy ustawieniu szerokości obrazka psa,
             {                                               //psy kończą bieg przed linią mety
                 return true;

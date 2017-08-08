@@ -93,19 +93,21 @@ namespace GreyhoundRace
             {
                 if (GreyhoundArray[i].Run() == true)
                 {
-                    timer1.Stop();
-                    for (int j = 0; j <=3 ; j++)
+                    
+                    for (int k = 0; k <=2 ; k++)
+                    {                        
+                        GuyArray[k].Collect(i);
+                        GuyArray[k].ClearBet();
+                        GuyArray[k].UpdateLabels();
+                    }
+                    for (int j = 0; j <= 3; j++)
                     {
                         GreyhoundArray[j].TakeStartingPosition();
                     }
-                    for (int k = 0; k <=2 ; k++)
-                    {
-                        GuyArray[k].UpdateLabels();                        
-                    }
+                    timer1.Stop();
                     groupBox1.Enabled = true;
-
-
-
+                    MessageBox.Show("Chart nr " + (i + 1) + " wygrał wyścig!");
+                    
                 } else
                 {
                     GreyhoundArray[i].Run();
@@ -120,9 +122,8 @@ namespace GreyhoundRace
                 if (GuyArray[i].MyRadioButton.Checked == true)
                 {
                     GuyArray[i].PlaceBet((int)betAmount.Value, ((int)houndNumeric.Value - 1));
-                    GuyArray[i].MyBet.GetDescription();
+                    GuyArray[i].MyLabel.Text = GuyArray[i].MyBet.GetDescription();
                 }
-
             }
         }
 

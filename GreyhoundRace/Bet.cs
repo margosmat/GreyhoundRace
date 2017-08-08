@@ -15,18 +15,15 @@ namespace GreyhoundRace
 
         public string GetDescription()
         {
-            string description;
             if (Bettor.PlaceBet(Bettor.MyBet.Amount, Bettor.MyBet.Dog) == true)
             {
-                description = Bettor.Name + " stawia " + Amount + " zł na charta nr " + (Dog + 1);
+                return  Bettor.Name + " stawia " + Amount + " zł na charta nr " + (Dog + 1);
             }
             else
             {
-                description = Bettor.Name + " nie zawarł zakładu";
                 Bettor.ClearBet();
+                return  Bettor.Name + " nie zawarł zakładu";                
             }
-            Bettor.MyLabel.Text = description;
-            return description;
         }
         
         public int PayOut(int Winner)
@@ -37,7 +34,7 @@ namespace GreyhoundRace
             }
             else
             {
-                return -Amount
+                return -Amount;
             }
         }
     }
